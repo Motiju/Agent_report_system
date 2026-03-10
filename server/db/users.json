@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "agentCode": "a",
+        "password": "abc",
+        "fullName": "moti",
+        "role": "Admin"
+    },
+    {
+        "id": 2,
+        "agentCode": "b",
+        "password": "cba",
+        "fullName": "ari",
+        "role": "Agent"
+    },
+    {
+        "id": 3,
+        "agentCode": "c",
+        "password": "abc",
+        "fullName": "meir",
+        "role": "Agent"
+    },
+    {
+        "id": 4,
+        "agentCode": "d",
+        "password": "abc",
+        "fullName": "haim",
+        "role": "Agent"
+    }
+]

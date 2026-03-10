@@ -16,8 +16,6 @@ function Login() {
     }
 
     async function sendUserInput() {
-        console.log(agentCode);
-        console.log(agentPassword);
         try {
             const res = await fetch("http://localhost:3000/auth/login", {
                 method: "post",
@@ -29,9 +27,13 @@ function Login() {
             })
             const getResponse = await res.json()
             console.log(getResponse);
+            if (getResponse.error){
+                return ""
+            }
+            localStorage.setItem("token", getResponse.token)
             if (getResponse.user.role === "Admin"){
                 navigate("/admin_dashboard")
-            } else {
+            } else if (getResponse.user.role === "Agent"){
                 navigate("/agent_dashboard")
             }
         } catch (error) {
