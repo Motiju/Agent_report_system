@@ -1,9 +1,15 @@
 
 
 function AdminUsers() {
+
+    function getAllUsers(){
+
+    }
+
     return (
         <div>
-            <p>admin users</p>
+            <button onClick={getAllUsers}>get all users</button>
+            <button>add user</button>
         </div>
     )
 }

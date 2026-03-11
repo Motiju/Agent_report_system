@@ -19,8 +19,8 @@ function AgentNewReport() {
         setUrgency(e.target.value)
     }
 
-    function getFile(e: React.ChangeEvent<HTMLInputElement>){
-        if (e.target.files && e.target.files[0]){
+    function getFile(e: React.ChangeEvent<HTMLInputElement>) {
+        if (e.target.files && e.target.files[0]) {
             setFile(e.target.files[0])
         }
     }
@@ -31,7 +31,7 @@ function AgentNewReport() {
         formData.append("category", category)
         formData.append("urgency", urgency)
         formData.append("message", message)
-        if (file){
+        if (file) {
             formData.append("file", file)
         }
         const res = await fetch("http://localhost:3000/report", {
