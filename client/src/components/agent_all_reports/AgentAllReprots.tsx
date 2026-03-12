@@ -6,7 +6,7 @@ function AgentAllReprots() {
 
     async function getAllAgentReports() {
         const token = localStorage.getItem("token")
-        const res = await fetch("http://localhost:3000/reports", {
+        const res = await fetch("http://localhost:3000/report", {
             headers: {
                 "Authorization": `Bearer ${token}`
             }

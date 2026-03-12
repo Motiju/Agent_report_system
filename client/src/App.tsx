@@ -8,6 +8,7 @@ import AgentCsvUploadPage from './pages/agent_csv_upload_page/AgentCsvUploadPage
 import AgentAllReportsPage from './pages/agent_all_reports_page/AgentAllReportsPage'
 import AdminUsersPage from './pages/admin_users_page/AdminUsersPage'
 import AdminReportPage from './pages/admin_reports_page/AdminReportPage'
+import ProtectedRoute from './components/protcted_router/ProtectedRouter'
 
 function App() {
 
@@ -16,7 +17,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login></Login>}></Route>
-          <Route path='/agent_dashboard' element={<AgentDashboardPage></AgentDashboardPage>}></Route>
+          <Route path='/agent_dashboard' element={
+            <ProtectedRoute>
+              <AgentDashboardPage></AgentDashboardPage>
+            </ProtectedRoute>
+          }></Route>
           <Route path='/admin_dashboard' element={<AdminDashboardPage></AdminDashboardPage>}></Route>
           <Route path='/agent_new_report' element={<AgentNewReportPage></AgentNewReportPage>}></Route>
           <Route path='/agent_CSV_Upload' element={<AgentCsvUploadPage></AgentCsvUploadPage>}></Route>

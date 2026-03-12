@@ -19,7 +19,7 @@ function AgentCsvUpload() {
         } else {
             return console.log("there is no csv file");
         }
-        const res = await fetch("http://localhost:3000/reports/csv", {
+        const res = await fetch("http://localhost:3000/report/csv", {
             method: "post",
             headers: {
                 "Authorization": `Bearer ${token}`
